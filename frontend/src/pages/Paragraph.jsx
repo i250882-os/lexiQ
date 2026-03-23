@@ -26,7 +26,7 @@ export default function Paragraph() {
         api.get(`/words/${word}`).then((res) => {
           setDetails(res.data.definition);
         })
-      }, 500)
+      }, 1000)
   }
   
   const handleOnMouseLeave = () => {
