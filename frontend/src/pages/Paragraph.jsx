@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer.jsx"
 import { useState, useEffect, useRef } from 'react'
 import style from "./Paragraph.module.css"
-import api from "../api/axios.js"
+import {api} from "../api/axios.js"
 
 export default function Paragraph() {
 
@@ -11,6 +11,7 @@ export default function Paragraph() {
   const [hoveredWord, setHoveredWord] = useState(null)
   const [details, setDetails] = useState(" Hover Over a Word To See Its Details")
   const hoverTimeout = useRef(null)
+  const hoveredTimeout2 = useRef(null)
 
   useEffect(() => {
     api.get('/paragraph/').then((res) => {
@@ -20,17 +21,21 @@ export default function Paragraph() {
   }, [])
   
   const handleOnMouseEnter = (w, i) => {
+    const word = w.replace(/[^a-zA-Z]/g, '').toLowerCase()
     hoverTimeout.current = setTimeout(() => {
         setHoveredWord(i);
-        const word = w.replace(/[^a-zA-Z]/g, '').toLowerCase()
-        api.get(`/words/${word}`).then((res) => {
+        api.get(`/words/${word}/`).then((res) => {
           setDetails(res.data.definition);
         })
-      }, 1000)
+      }, 500);
+    hoveredTimeout2.current = setTimeout(() => {
+      api.post("/user-words/", { word, status: "weak"})
+    }, 1000)
   }
   
   const handleOnMouseLeave = () => {
     clearTimeout(hoverTimeout.current);
+    clearTimeout(hoveredTimeout2.current);
     setHoveredWord(null);
   }
 

@@ -4,14 +4,17 @@ import './App.css'
 import Home from './pages/Home'
 import Paragraph from './pages/Paragraph'
 import Quiz from './pages/Quiz'
+import ProtectedRoute from './routes/ProtectedRoute'
+import Login from './pages/Login'
 
 function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/paragraph" element={<Paragraph />} />
-      <Route path="/quiz" element={<Quiz />} />
+      <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+      <Route path="/paragraph" element={<ProtectedRoute><Paragraph /></ProtectedRoute>} />
+      <Route path="/quiz" element={<ProtectedRoute><Quiz /></ProtectedRoute>} />
+      <Route path="/login" element={<Login />} />
     </Routes>
   )
 }

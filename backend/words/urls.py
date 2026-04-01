@@ -8,8 +8,4 @@ router.register(r'words', WordViewSet)
 router.register(r'paragraph', ParagraphViewSet)
 router.register(r'user-words', UserWordViewSet)
 
-urls = [
-    path('api/token/', TokenObtainPairView.as_view()),       # login → get tokens
-    path('api/token/refresh/', TokenRefreshView.as_view()),  
-]
-urlpatterns = router.urls + urls
+urlpatterns = router.urls

@@ -510,6 +510,72 @@ WORDS = [
         "The boundary of the heliosphere, where the solar wind meets interstellar space.",
         "Voyager 1 crossed the heliopause in 2012, entering interstellar space.",
     ),
+    # --- Additional stop-words and commonly used words ---
+    (
+        "the",
+        "Definite article used before a noun to indicate a specific person or thing.",
+        "The cat sat on the mat.",
+    ),
+    (
+        "a",
+        "Indefinite article used before a singular noun that is not specific.",
+        "I saw a bird in the tree.",
+    ),
+    (
+        "to",
+        "Preposition indicating direction, destination, or a goal.",
+        "She walked to the store to buy groceries.",
+    ),
+    (
+        "of",
+        "Preposition indicating possession, origin, or composition.",
+        "The color of the sky is blue.",
+    ),
+    (
+        "in",
+        "Preposition indicating location, time period, or state.",
+        "The book is in the library.",
+    ),
+    (
+        "and",
+        "Conjunction used to connect words, phrases, or clauses.",
+        "Cats and dogs are popular pets.",
+    ),
+    (
+        "is",
+        "Third person singular present tense of the verb 'to be'.",
+        "Water is essential for life.",
+    ),
+    (
+        "that",
+        "Pronoun or conjunction used to introduce a clause or refer to something previously mentioned.",
+        "The book that I read was excellent.",
+    ),
+    (
+        "it",
+        "Pronoun used to refer to a thing or an animal previously mentioned.",
+        "The dog wagged its tail because it was happy.",
+    ),
+    (
+        "from",
+        "Preposition indicating the source, origin, or starting point of something.",
+        "The letter came from my friend.",
+    ),
+    (
+        "earths",
+        "Plural of earth; multiple planets or pieces of land.",
+        "Different earths in the solar system have different compositions.",
+    ),
+    (
+        "worlds",
+        "Plural of world; multiple planets or areas with inhabitants.",
+        "Many science fiction stories feature multiple worlds.",
+    ),
+    (
+        "onethird",
+        "A fraction representing one part out of three equal parts.",
+        "One-third of the pizza was eaten by the children.",
+    ),
 ]
 
 

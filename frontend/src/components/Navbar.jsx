@@ -1,6 +1,11 @@
 import style from "./Navbar.module.css"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 function Navbar() {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.clear("access");
+    navigate("/login");
+  }
   return <nav className="flex h-[65px] items-center p-2 gap-5">
     <Link to="/">
       <div className="w-10 h-10 bg-black flex items-center justify-center">
@@ -25,6 +30,7 @@ function Navbar() {
         </li>
       </ul>
     </div>
+    <span onClick={handleLogout} className="cursor-pointer ml-auto">Log Out</span>
   </nav>
 }
 export default Navbar
