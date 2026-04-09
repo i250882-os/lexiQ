@@ -29,3 +29,40 @@ dist/
 .DS_Store
 Thumbs.db
 pyrightconfig.json
+backend/.cleanup_progress
+backend/DELIVERABLES.txt
+backend/ENRICHMENT_GUIDE.md
+backend/QUICK_START.txt
+backend/TEST_REPORT.md
+paragraphs.json
+backend/words/management/commands/cleanup_missing_words.py
+backend/words/management/commands/enrich_words.py
+backend/words/management/commands/import_paragraphs.py
+backend/words/management/commands/process_paragraph.py
+backend/words/management/commands/verify_paragraph_words.py
+
+# Copied from frontend/.gitignore
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
