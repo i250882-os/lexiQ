@@ -12,8 +12,8 @@ export default function Login() {
     }
   }, [])
   const [form, setForm] = useState({
-    username: "",
-    password: "",
+    username: "user",
+    password: "1234",
   });
 
   function handleChange(e) {

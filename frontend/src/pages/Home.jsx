@@ -25,9 +25,9 @@ export default function Home() {
           <Link to="/paragraph"><button className={style.button}>
             Read Paragraph
           </button></Link>
-          <button className={style.button}>
+          <Link to="/quiz">button className={style.button}><button className={style.button}>
             Take Quiz
-          </button>
+          </button></Link>
         </div>
       </div>
       <div className="flex flex-col gap-8 max-w-[800px] mx-auto">
@@ -46,7 +46,7 @@ export default function Home() {
           <div className={style.stepBox}>
             <BookSVG />
             <span>Solve</span>
-            <p>Take an AI generated quiz that is based on the words you find difficult, We will keep track of what you do and dont know!</p>
+            <p>Take an AI generated quiz that is based on the words you find difficult, We will keep track of what you do and dont know!(SOON)</p>
           </div>
         </div>
       </div>

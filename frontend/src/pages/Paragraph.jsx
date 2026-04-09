@@ -6,6 +6,15 @@ import { api } from "../api/axios.js"
 
 
 export default function Paragraph() {
+  const [showToast, setShowToast] = useState(false)
+
+  useEffect(() => {
+    // show a small apology/toast when the paragraph page mounts
+    setShowToast(true)
+    const t = setTimeout(() => setShowToast(false), 6000)
+    return () => clearTimeout(t)
+  }, [])
+
   const FIELDS = [
     { label: 'Definition', key: 'definition' },
     { label: 'Part Of Speech', key: 'part_of_speech' },
@@ -97,13 +106,18 @@ export default function Paragraph() {
   };
   return <> <Navbar />
     <div className={style.page}>
+      {showToast && (
+        <div className="fixed bottom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded shadow" role="status">
+          Sorry — our servers are a bit slow right now. We're working on it.
+        </div>
+      )}
       <div className={style.sidebar}>
         {paragraphs.map((p) => (
           <div className={style.sidebarButton} key={p.id} onClick={() => { setCurrPara(p.word_list) }}>{p.title}</div>
         ))}
       </div>
       <div className={style.contentWrapper}>
-        <div className={style.details}>
+        {currPara.length !== 0 ? <div className={style.details}>
           <h3 className="font-bold text-2xl p-1">{details.text}</h3>
           <div>
             {FIELDS.map(({ label, key }) => {
@@ -115,7 +129,7 @@ export default function Paragraph() {
               </span>);
             })}
           </div>
-        </div>
+        </div> : <div className="text-2xl font-bold">Select a Paragraph and hover over any word to get its details</div>}
         <div className={style.content}>
           {currPara.map((w, i) => (
             <span
