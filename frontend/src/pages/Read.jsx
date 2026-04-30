@@ -113,6 +113,10 @@ export default function Read() {
 
   return <div className={style.page}> 
     <span className={`${style.weakToast} ${!showToast && "hidden"}`}>Added to Weak Words!</span>
+    <div className="text-xs text-gray-500 px-6 py-2 space-y-1 absolute flex top-[2%] left-[50%] translate-x-[-50%] gap-1">
+      <p>• Hover to see meaning</p>
+      <p>• Click to mark as weak for quiz</p>
+    </div>
     <div className={style.contentWrapper}>
         <div className={style.content}>
           {currPara && currPara.map((w, i) => (
