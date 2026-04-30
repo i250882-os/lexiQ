@@ -3,12 +3,13 @@
 An Intelligent English vocabulary building app. Leaning mathod based on scientific papers on learning vocabulary.
 
 ## How it works:
-- The idea is you read a selected paragraph, and when you feel that you dont know a word, instead of leaving the paragraph and using google etc etc. You can just move your cursor over the word to see its details, Then if you know that you would wanna learn this word, you can mark it as weak word by clicking on it, by doing that, when you take a quiz, the MCQs selection will prioritize MCQs based on your weak words.
+The idea is you read a selected paragraph, and when you feel that you dont know a word, instead of leaving the paragraph and using google etc etc. You can just move your cursor over the word to see its details, Then if you know that you would wanna learn this word, you can mark it as weak word by clicking on it, by doing that, when you take a quiz, the MCQs selection will prioritize MCQs based on your weak words. 
 
 ## Features
 - [x] Read and paragraph and look up meanings
 - [x] Remember user's weak words for quizes
 - [x] Quizes
+- [ ] Word Scoring
 
 ## Tech Stack
 - `Python` | Django for backend API
